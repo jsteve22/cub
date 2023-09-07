@@ -13,3 +13,11 @@ To start the same container again use:
 ```
 docker start -i cub
 ```
+
+### Testing
+Once in the docker container: 
+```
+cd bfv/
+make
+./zntt_cub
+```

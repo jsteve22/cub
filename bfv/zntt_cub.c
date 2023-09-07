@@ -242,17 +242,12 @@ int main() {
   fprintf(stdout, "Done conv2d_6\n");
   fprintf(stdout, "(%ld, %ld, %ld)\n", channels, width, height);
 
-  free(private_key);
-  publickey_free(public_key);
-
   fprintf(stdout, "\n\n");
   fprintf(stdout, "mult: %ld\n", mult);
   fprintf(stdout, "add:  %ld\n", add);
+  fprintf(stdout, "\n\n");
 
-  return 0;
-
-
-
+  // return 0;
 
   for (i = 0; i < width*height; i++) {
     fprintf(stdout, "%2ld ", image[0][i]);
@@ -262,7 +257,7 @@ int main() {
   fprintf(stdout, "\n");
 
   i64* results = dense_layer("./miniONN_cifar_model/dense.kernel.txt", image, &channels, &width, &height, data);
-  // scale_down(results, 10, 256);
+  scale_down(results, 10, 256);
   fprintf(stdout, "\n");
   fprintf(stdout, "Linear: [");
   for (i = 0; i < 10; i++) {

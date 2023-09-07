@@ -3,3 +3,11 @@
 
 # remove pycache
 **/__pycache__
+
+# ignore executables
+**/client
+**/cub
+**/ntt_cub
+**/server
+**/test
+**/zntt_cub
