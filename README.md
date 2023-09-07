@@ -5,8 +5,8 @@ This will also hold a dockerfile to create an image to run this code.
 
 ### Building
 ```
-docker build -t cubImg .
-docker run -it --name cub --mount "type=bind,source=$PWD,target=/home/" cubImg
+docker build -t cubimg .
+docker run -it --name cub --mount "type=bind,source=$PWD,target=/home/" cubimg
 ```
 
 To start the same container again use:
