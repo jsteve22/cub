@@ -1,0 +1,5 @@
+# remove object files
+**/*.o
+
+# remove pycache
+**/__pycache__
