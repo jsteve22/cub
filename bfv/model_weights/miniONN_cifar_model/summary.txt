@@ -1,0 +1,12 @@
+miniONN_cifar_model 11
+conv2d ./model_weights/miniONN_cifar_model/conv2d.kernel.txt relu 1 1 _
+conv2d ./model_weights/miniONN_cifar_model/conv2d_1.kernel.txt relu 1 1 _
+meanpooling 2 0 2
+conv2d ./model_weights/miniONN_cifar_model/conv2d_2.kernel.txt relu 1 1 _
+conv2d ./model_weights/miniONN_cifar_model/conv2d_3.kernel.txt relu 1 1 _
+meanpooling 2 0 2
+conv2d ./model_weights/miniONN_cifar_model/conv2d_4.kernel.txt relu 1 1 _
+conv2d ./model_weights/miniONN_cifar_model/conv2d_5.kernel.txt relu 0 1 _
+conv2d ./model_weights/miniONN_cifar_model/conv2d_6.kernel.txt relu 0 1 _
+flatten
+dense ./model_weights/miniONN_cifar_model/dense.kernel.txt softmax _
